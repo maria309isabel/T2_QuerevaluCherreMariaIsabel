@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MaterialModule } from '../../angular-material/material/material.module';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-pregunta4',
@@ -40,4 +41,6 @@ export class Pregunta4Component {
       alert('Negativo en el control de alcoholemia');
     }
   }
+}
+
 }

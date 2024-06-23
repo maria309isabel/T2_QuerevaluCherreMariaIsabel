@@ -1,1 +1,19 @@
-<p>pregunta4 works!</p>
+<div class="container">
+    <h2>Control de Alcohol en Conductores</h2>
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Tipo de Vehículo</mat-label>
+        <input matInput type="text" formControlName="vehicleType" placeholder="Ingrese el tipo de vehículo">
+        <mat-error *ngIf="alcoholForm.get('vehicleType').hasError('required')">El tipo de vehículo es requerido</mat-error>
+      </mat-form-field>
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Tasa de Alcohol</mat-label>
+        <input matInput type="number" formControlName="alcoholRate" placeholder="Ingrese la tasa de alcohol">
+        <mat-error *ngIf="alcoholForm.get('alcoholRate').hasError('required')">La tasa de alcohol es requerida</mat-error>
+        <mat-error *ngIf="alcoholForm.get('alcoholRate').hasError('min')">La tasa de alcohol debe ser mayor o igual a 0</mat-error>
+      </mat-form-field>
+      
+      <button mat-raised-button color="primary" type="submit">Verificar</button>
+    </form>
+  </div>
