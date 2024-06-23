@@ -9,7 +9,6 @@ import { MaterialModule } from '../../angular-material/material/material.module'
   styleUrl: './pregunta2.component.css'
 })
 export class Pregunta2Component {
-
   calcularUtilidad(salario: number, anos: number): number | null {
     if (isNaN(salario) || isNaN(anos)) {
       return null;
