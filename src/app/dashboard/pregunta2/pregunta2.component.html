@@ -1,1 +1,23 @@
 <p>pregunta2 works!</p>
+<mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title> Pregunta 2</mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <div class="form">
+        <mat-form-field>
+          <mat-label>Ingrese su salario</mat-label>
+          <input matInput type="text" #txtsalario>
+        </mat-form-field>
+  
+        <mat-form-field class="example-form-field">
+          <mat-label>Ingrese los años trabajados</mat-label>
+          <input matInput type="number" #txtano>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="submit(txtsalario,txtano)">Calcular</button>
+    </mat-card-actions>
+  </mat-card>
